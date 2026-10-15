@@ -1,46 +1,41 @@
 # Trustworthy Generative AI - DIA 3
 
-ESILV - Majeure Data & Artificial Intelligence (A4 / S7)  
-Cours : Next-Generation AI (Didier Parisot)  
-Pack version : `2026-10-14-students-1`  
+ESILV - Data & Artificial Intelligence Major (Year 4 / S7)  
+Course: Next-Generation AI (Didier Parisot)  
+Pack version: `2026-10-14-students-1`  
 
 ## Sub-group Identification
 
-- **Classe / Groupe** : DIA 3
-- **Sous-groupe** : Sub-group 1 (à ajuster avec le numéro exact de table / sous-groupe)
-- **Membres du sous-groupe** :
+- **Class / Group**: DIA 3
+- **Sub-group Members**:
   - Louis Le Forestier (louis.le_forestier@edu.devinci.fr)
-  - [Membre 2]
-  - [Membre 3]
-  - [Membre 4]
-  - [Membre 5]
-  - [Membre 6]
-  - [Membre 7]
-  - [Membre 8]
+  - Maxime Laurent (maxime.laurent@edu.devinci.fr)
+  - Baptiste Noailhac (baptiste.noailhac@edu.devinci.fr)
 
 ## Environment & Prerequisites
 
-- **Python** : >= 3.10 (testé sous Python 3.11.9, SQLite 3.45.1)
-- **Dépendances** : bibliothèque standard Python + `requests`
-- **Empreinte de la base SQLite (`boutique.sqlite`)** :
+- **Python**: >= 3.10 (verified on Python 3.11.9, SQLite 3.45.1)
+- **Dependencies**: Python standard library + `requests`
+- **Database Fingerprint (`boutique.sqlite`)**:
   `0077e235adc2ca647b484e3083c98a6d7cae3ef3655ce366a299caf13398fec2` (seed `20260925`)
+- **Access Verification Status**: 5/5 models verified and active (Groq and OpenRouter free tiers).
 
-## Setup Instructions
+## Setup & Execution Instructions
 
-1. Créer et activer l'environnement virtuel :
+1. Create and activate a Python virtual environment:
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
    pip install requests
    ```
 
-2. Exporter les clés d'API (sans jamais les commiter) :
+2. Set API keys in your environment (never commit keys to git):
    ```powershell
    $env:GROQ_API_KEY = "gsk_..."
    $env:OPENROUTER_API_KEY = "sk-or-v1-..."
    ```
 
-3. Vérifier les accès et l'intégrité :
+3. Run data integrity and access checks:
    ```powershell
    cd kit-td1
    python verify-data.py
@@ -50,30 +45,30 @@ Pack version : `2026-10-14-students-1`
 ## Repository Structure
 
 ```text
-├── .gitignore                          # Protection des secrets et fichiers locaux
-├── README.md                           # Identification du sous-groupe et commandes
-├── prompts-en.md                       # Prompts système et templates utilisés
-├── reference-td1.csv                   # Vérités de référence C01 à C20 calculées en SQL
-├── model-question-comparison-en.csv    # Comparaison détaillée modèle x question
-├── five-model-summary-en.csv           # Synthèse des 5 modèles autorisés et coûts
-├── configuration-comparison-en.csv     # Comparaison des configurations (TD3)
-├── cost-calculation-en.csv             # Calculs de coûts (TD3)
-├── contributions-en.csv                # Répartition des contributions des membres
-├── voting-tests-en.csv                 # Tests du vote k-sur-n (TD2)
-├── routing-rule-en.md                  # Règle de routage du sous-groupe (TD2)
+├── .gitignore                          # Excludes secrets, virtual environments, and local files
+├── README.md                           # Sub-group identification and reproduction instructions
+├── prompts-en.md                       # Verbatim system messages and question prompt templates
+├── reference-td1.csv                   # Reference queries and values for questions C01-C20
+├── model-question-comparison-en.csv    # Granular model-question comparison and traces pointers
+├── five-model-summary-en.csv           # Sourced index, dated prices, and family summaries
+├── configuration-comparison-en.csv     # Architecture and trade-off comparison matrix (TD3)
+├── cost-calculation-en.csv             # Token consumption and operational cost accounting (TD3)
+├── contributions-en.csv                # Member responsibilities and contribution tracking
+├── voting-tests-en.csv                 # Consensus and quorum test suites (TD2)
+├── routing-rule-en.md                  # Routing policy specifications (TD2)
 ├── reports/
-│   ├── td1.md                          # Compte-rendu du TD 1
-│   ├── td2.md                          # Compte-rendu du TD 2
-│   └── td3.md                          # Compte-rendu du TD 3
+│   ├── td1.md                          # Session 1 report: model comparison & trace analysis
+│   ├── td2.md                          # Session 2 report: voting quorum & routing rule
+│   └── td3.md                          # Session 3 report: costing & architectural decision
 └── kit-td1/
-    ├── data/                           # Base boutique.sqlite et CSV de référence
-    ├── schema.sql                      # Schéma relationnel (3 tables)
-    ├── questions-td1.json              # 20 questions de chiffre d'affaires
-    ├── modeles-autorises.json          # Modèles autorisés et paramètres
-    ├── skeleton-multi-llm-en.py        # Squelette d'orchestration
-    ├── sandbox_sqlite.py               # Bac à sable SQLite en lecture seule
-    ├── check_access.py                 # Vérificateur d'accès
-    ├── verify-data.py                  # Vérificateur d'intégrité SHA-256
-    ├── atelier-vote.py                 # Atelier TD 2 vote
-    └── atelier-routage.py              # Atelier TD 2 routage
+    ├── data/                           # Verified boutique.sqlite database and CSV tables
+    ├── schema.sql                      # Database relational schema (3 tables)
+    ├── questions-td1.json              # 20 reference revenue questions
+    ├── modeles-autorises.json          # Authorized model configurations and rate constraints
+    ├── skeleton-multi-llm-en.py        # Core orchestration engine
+    ├── sandbox_sqlite.py               # Read-only SQLite execution sandbox
+    ├── check_access.py                 # Provider and access validation script
+    ├── verify-data.py                  # Cryptographic SHA-256 data integrity check
+    ├── atelier-vote.py                 # Voting workshop module (TD2)
+    └── atelier-routage.py              # Routing workshop module (TD2)
 ```
