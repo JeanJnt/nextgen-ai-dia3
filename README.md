@@ -48,18 +48,19 @@ Pack version: `2026-10-14-students-1`
 ├── .gitignore                          # Excludes secrets, virtual environments, and local files
 ├── README.md                           # Sub-group identification and reproduction instructions
 ├── prompts-en.md                       # Verbatim system messages and question prompt templates
-├── reference-td1.csv                   # Reference queries and values for questions C01-C20
-├── model-question-comparison-en.csv    # Granular model-question comparison and traces pointers
-├── five-model-summary-en.csv           # Sourced index, dated prices, and family summaries
-├── configuration-comparison-en.csv     # Architecture and trade-off comparison matrix (TD3)
-├── cost-calculation-en.csv             # Token consumption and operational cost accounting (TD3)
-├── contributions-en.csv                # Member responsibilities and contribution tracking
-├── voting-tests-en.csv                 # Consensus and quorum test suites (TD2)
-├── routing-rule-en.md                  # Routing policy specifications (TD2)
+├── reference-td1.csv                   # Reference queries and values for questions C01-C20 (TD1 hand-in)
+├── model-question-comparison-en.csv    # Granular model-question comparison and traces pointers (TD1 hand-in)
+├── five-model-summary-en.csv           # Sourced index, dated prices, and family summaries (TD1 hand-in)
 ├── reports/
 │   ├── td1.md                          # Session 1 report: model comparison & trace analysis
 │   ├── td2.md                          # Session 2 report: voting quorum & routing rule
 │   └── td3.md                          # Session 3 report: costing & architectural decision
+├── templates/                          # Templates and worksheets for subsequent sessions (TD2 & TD3)
+│   ├── configuration-comparison-en.csv # Architecture and trade-off comparison matrix (TD3)
+│   ├── cost-calculation-en.csv         # Token consumption and operational cost accounting (TD3)
+│   ├── contributions-en.csv            # Member responsibilities and contribution tracking
+│   ├── voting-tests-en.csv             # Consensus and quorum test suites (TD2)
+│   └── routing-rule-en.md              # Routing policy specifications (TD2)
 └── kit-td1/
     ├── data/                           # Verified boutique.sqlite database and CSV tables
     ├── schema.sql                      # Database relational schema (3 tables)
