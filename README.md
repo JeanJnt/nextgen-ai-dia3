@@ -4,6 +4,8 @@ ESILV - Data & Artificial Intelligence Major (Year 4 / S7)
 Course: Next-Generation AI (Didier Parisot)  
 Pack version: `2026-10-14-students-1`  
 
+> Engineering repository for **Trustworthy Generative AI**: automatic model routing by request difficulty, k-of-n quorum consensus for high-stakes decision verification, and cost-performance trade-off modeling across an e-commerce database benchmark.
+
 ## Sub-group Identification
 
 - **Class / Group**: DIA 3
